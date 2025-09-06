@@ -12,7 +12,8 @@
     "prettier": "prettier . --write",
     "prettier:check": "prettier . --check",
     "stylelint": "stylelint \"**/*.{css,scss}\" --fix",
-    "stylelint:check": "stylelint \"**/*.{css,scss}\""
+    "stylelint:check": "stylelint \"**/*.{css,scss}\"",
+    "prepare": "husky"
   },
   "dependencies": {
     "next": "15.5.2",
@@ -27,6 +28,8 @@
     "eslint": "^9",
     "eslint-config-next": "15.5.2",
     "eslint-config-prettier": "^10.1.8",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.1.6",
     "prettier": "^3.6.2",
     "sass": "^1.92.1",
     "stylelint": "^16.23.1",
