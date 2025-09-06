@@ -4,18 +4,43 @@ $text: #f5f7fb;
 $primary: #3b82f6;
 
 /* Reset de base */
-* { box-sizing: border-box; }
-html, body { padding: 0; margin: 0; }
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   background: $bg;
   color: $text;
-  font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", sans-serif;
+  font-family:
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    Roboto,
+    Ubuntu,
+    Cantarell,
+    "Helvetica Neue",
+    Arial,
+    "Noto Sans",
+    "Apple Color Emoji",
+    "Segoe UI Emoji",
+    "Segoe UI Symbol",
+    "Noto Color Emoji",
+    sans-serif;
 }
 
 h1 {
   font-size: 2rem;
-  padding: 0;
   margin: 0;
+  padding: 0;
 }
 
-a { color: $primary; text-decoration: none; }
+a {
+  color: $primary;
+  text-decoration: none;
+}

@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import './styles/globals.scss';
+import "./styles/globals.scss";
 
 export const metadata: Metadata = {
-  title: 'UI/UX Demonstration',
- description: 'Next.js + SCSS (BEM-ready)',
+  title: "UI/UX Demonstration",
+  description: "Next.js + SCSS (BEM-ready)",
 };
 
 export default function RootLayout({
