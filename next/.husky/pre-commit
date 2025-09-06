@@ -1,9 +1,12 @@
 #!/usr/bin/env sh
+echo ""
 echo "🔍 Running lint pre-commit check..."
 npm run lint
 
+echo ""
 echo "🔍 Running prettier pre-commit check..."
 npm run prettier:check
 
+echo ""
 echo "🔍 Running stylelint pre-commit check..."
 npm run stylelint:check
