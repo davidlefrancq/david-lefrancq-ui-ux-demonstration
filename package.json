@@ -1,0 +1,24 @@
+{
+  "name": "david-lefrancq-ui-ux-demonstration",
+  "version": "0.1.0",
+  "description": "Ce dépôt est ma carte de visite technique pour proposer du concret lors des échanchanges avec de potentiels recruteurs.",
+  "main": "index.js",
+  "scripts": {
+    "prepare": "husky",
+    "prepare:next": "cd next && npm i && npx husky",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davidlefrancq/david-lefrancq-ui-ux-demonstration.git"
+  },
+  "author": "David Lefrancq",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/davidlefrancq/david-lefrancq-ui-ux-demonstration/issues"
+  },
+  "homepage": "https://github.com/davidlefrancq/david-lefrancq-ui-ux-demonstration#readme",
+  "devDependencies": {
+    "husky": "^9.1.7"
+  }
+}
