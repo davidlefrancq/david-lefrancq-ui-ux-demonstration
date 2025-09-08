@@ -12,3 +12,5 @@ npm run prettier:check
 echo ""
 echo "🔍 Running stylelint pre-commit check..."
 npm run stylelint:check
+
+cd ../ || exit 1
