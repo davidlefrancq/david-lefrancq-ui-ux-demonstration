@@ -4,6 +4,9 @@
   "description": "Ce dépôt est ma carte de visite technique pour proposer du concret lors des échanchanges avec de potentiels recruteurs.",
   "main": "index.js",
   "scripts": {
+    "start": "docker-compose up -d",
+    "restart": "docker-compose restart",
+    "stop": "docker-compose down -v",
     "prepare": "husky && npm run prepare:next",
     "prepare:next": "cd next && npm i",
     "test": "echo \"Error: no test specified\" && exit 1"
