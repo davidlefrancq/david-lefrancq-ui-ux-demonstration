@@ -1,8 +1,7 @@
 {
   "name": "david-lefrancq-ui-ux-demonstration",
   "version": "0.1.0",
-  "description": "Ce dépôt est ma carte de visite technique pour proposer du concret lors des échanchanges avec de potentiels recruteurs.",
-  "main": "index.js",
+  "description": "Ce dépôt est une base concrète pour échanger sur mon approche technique et mes réalisations. Un support ouvert aux discussions avec recruteurs, équipes ou partenaires potentiels.",
   "scripts": {
     "start": "docker-compose up -d",
     "restart": "docker-compose restart",
