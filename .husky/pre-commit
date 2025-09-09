@@ -3,14 +3,23 @@ cd ./next || exit 1
 
 echo ""
 echo "🔍 Running lint pre-commit check..."
-npm run lint
+if ! docker-compose run --rm nextjs sh -c "npm run lint"; then
+  echo "❌ Pre-commit lint check failed. Fix the issues and try again."
+  exit 1
+fi
 
 echo ""
 echo "🔍 Running prettier pre-commit check..."
-npm run prettier:check
+if ! docker-compose run --rm nextjs sh -c "npm run prettier:check"; then
+  echo "❌ Pre-commit prettier check failed. Fix the issues and try again."
+  exit 1
+fi
 
 echo ""
 echo "🔍 Running stylelint pre-commit check..."
-npm run stylelint:check
+if ! docker-compose run --rm nextjs sh -c "npm run stylelint:check"; then
+  echo "❌ Pre-commit stylelint check failed. Fix the issues and try again."
+  exit 1
+fi
 
 cd ../ || exit 1
