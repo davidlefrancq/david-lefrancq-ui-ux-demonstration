@@ -1,0 +1,26 @@
+{
+  "name": "david-lefrancq-ui-ux-demonstration",
+  "version": "0.1.0",
+  "description": "Ce dépôt est une base concrète pour échanger sur mon approche technique et mes réalisations. Un support ouvert aux discussions avec recruteurs, équipes ou partenaires potentiels.",
+  "scripts": {
+    "start": "docker-compose up -d",
+    "restart": "docker-compose restart",
+    "stop": "docker-compose down -v",
+    "prepare": "husky && npm run prepare:next",
+    "prepare:next": "cd next && npm i",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davidlefrancq/david-lefrancq-ui-ux-demonstration.git"
+  },
+  "author": "David Lefrancq",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/davidlefrancq/david-lefrancq-ui-ux-demonstration/issues"
+  },
+  "homepage": "https://github.com/davidlefrancq/david-lefrancq-ui-ux-demonstration#readme",
+  "devDependencies": {
+    "husky": "^9.1.7"
+  }
+}

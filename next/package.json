@@ -1,25 +1,40 @@
 {
   "name": "next",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "next lint --no-cache",
+    "format": "npm run prettier && npm run stylelint",
+    "format:check": "npm run prettier:check && npm run stylelint:check",
+    "prettier": "prettier . --write",
+    "prettier:check": "prettier . --check",
+    "stylelint": "stylelint \"**/*.{css,scss}\" --fix",
+    "stylelint:check": "stylelint \"**/*.{css,scss}\""
   },
   "dependencies": {
+    "next": "15.5.2",
     "react": "19.1.0",
-    "react-dom": "19.1.0",
-    "next": "15.5.2"
+    "react-dom": "19.1.0"
   },
   "devDependencies": {
-    "typescript": "^5",
+    "@eslint/eslintrc": "^3",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "15.5.2",
-    "@eslint/eslintrc": "^3"
+    "eslint-config-prettier": "^10.1.8",
+    "lint-staged": "^16.1.6",
+    "prettier": "^3.6.2",
+    "sass": "^1.92.1",
+    "stylelint": "^16.23.1",
+    "stylelint-config-prettier-scss": "^1.0.0",
+    "stylelint-config-standard-scss": "^15.0.1",
+    "stylelint-order": "^7.0.0",
+    "stylelint-scss": "^6.12.1",
+    "typescript": "^5"
   }
 }

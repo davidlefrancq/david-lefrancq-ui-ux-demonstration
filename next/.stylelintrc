@@ -1,0 +1,21 @@
+{
+  "extends": [
+    "stylelint-config-standard-scss",
+    "stylelint-config-prettier-scss"
+  ],
+  "customSyntax": "postcss-scss",
+  "plugins": ["stylelint-scss", "stylelint-order"],
+  "rules": {
+    "selector-class-pattern": [
+      "^(?:(?:[colut]-[a-z0-9]+(?:-[a-z0-9]+)*)(?:__(?:[a-z0-9]+(?:-[a-z0-9]+)*))?(?:--(?:[a-z0-9]+(?:-[a-z0-9]+)*))?|(?:is|has)-[a-z0-9]+(?:-[a-z0-9]+)*)$",
+      {
+        "resolveNestedSelectors": true,
+        "message": "Use BEM with prefixes (c|o|l|u|t): block[__element][--modifier] or states is-*/has-*."
+      }
+    ],
+    "order/properties-alphabetical-order": true,
+    "scss/load-no-partial-leading-underscore": true,
+    "scss/dollar-variable-pattern": "^[a-z0-9-]+$",
+    "scss/percent-placeholder-pattern": "^[a-z0-9-]+$"
+  }
+}

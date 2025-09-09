@@ -1,0 +1,17 @@
+services:
+  nextjs:
+    image: node:current-alpine
+    working_dir: /app
+    environment:
+      - NODE_ENV=development
+    volumes:
+      - ./next:/app  # Mounts local code in /app
+      - node_modules:/app/node_modules  # Persist node_modules in a docker volume
+      - next_cache:/app/.next  # Persist Next.js cache in a docker volume
+    ports:
+      - "3000:3000"
+    command: sh -c "npm install && npm run dev" # Installs dependencies and starts the Next.js dev server
+
+volumes:
+  node_modules:
+  next_cache:

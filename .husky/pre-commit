@@ -1,0 +1,16 @@
+#!/bin/sh
+
+# Function to run a command in the container and handle errors
+run_check() {
+  echo "🔍 Running $1..."
+  if ! docker-compose run --rm nextjs sh -c "npm run $1"; then
+    echo "❌ Pre-commit $1 check failed. Fix the issues and try again."
+    exit 1
+  fi
+  echo ""
+}
+
+# Run checks
+run_check lint
+run_check prettier:check
+run_check stylelint:check
