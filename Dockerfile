@@ -12,6 +12,3 @@ COPY next/.stylelintrc ./
 COPY next/.prettierignore ./
 
 RUN npm ci
-
-# Folder initialization
-RUN mkdir -p /app/src /app/public
