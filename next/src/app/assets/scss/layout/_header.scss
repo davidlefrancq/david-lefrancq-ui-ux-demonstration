@@ -1,0 +1,24 @@
+.l-header {
+  background: var(--color-header-bg, #fff);
+  box-shadow: 0 2px 4px rgb(0 0 0 / 10%);
+  padding: 1rem 0;
+
+  &__logo {
+    margin-bottom: 1rem;
+  }
+
+  &__nav {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+
+    a {
+      color: var(--color-header-link, #333);
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

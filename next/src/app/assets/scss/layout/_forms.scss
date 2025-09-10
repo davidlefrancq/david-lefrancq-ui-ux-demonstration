@@ -1,0 +1,27 @@
+.c-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  &__field {
+    border: 1px solid var(--color-border, #ccc);
+    border-radius: 4px;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+
+    &:focus {
+      border-color: var(--color-primary, #0070f3);
+      outline: none;
+    }
+  }
+
+  &__label {
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+  }
+
+  &__error {
+    color: var(--color-error, #ff4d4f);
+    font-size: 0.875rem;
+  }
+}

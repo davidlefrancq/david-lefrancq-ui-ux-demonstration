@@ -4,7 +4,7 @@ import path from "path";
 const nextConfig: NextConfig = {
   reactStrictMode: true,
   sassOptions: {
-    includePaths: [path.join(__dirname, "styles")],
+    includePaths: [path.join(__dirname, "src", "app", "assets", "scss")],
   },
   webpackDevMiddleware: (config) => {
     config.watchOptions = {

@@ -1,0 +1,88 @@
+/* Base block */
+.c-button {
+  align-items: center;
+  background: var(--color-primary);
+  border: 0;
+  border-radius: 0.5rem;
+  color: var(--color-white);
+  cursor: pointer;
+  display: inline-flex;
+  font: inherit;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-4);
+  text-decoration: none;
+  transition:
+    filter 0.2s ease,
+    opacity 0.2s ease;
+
+  &:hover {
+    filter: brightness(0.95);
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.7;
+  }
+
+  &__icon {
+    block-size: 1.1em;
+    display: inline-block;
+    inline-size: 1.1em;
+  }
+
+  &__label {
+    line-height: 1;
+  }
+
+  /* Loading spinner as element */
+  &__spinner {
+    animation: c-button-spin 1s linear infinite;
+    block-size: 1em;
+    border: 2px solid;
+    border-color: currentcolor transparent;
+    border-radius: 50%;
+    inline-size: 1em;
+  }
+
+  /* Modifiers */
+  &--ghost {
+    background: transparent;
+    border: 1px solid currentcolor;
+    color: var(--color-primary);
+    cursor: not-allowed;
+    opacity: 0.7;
+  }
+
+  &--success {
+    background: var(--color-success);
+  }
+
+  &--error {
+    background: var(--color-error);
+  }
+
+  &--loading {
+    pointer-events: none;
+
+    /* Hide regular icon while spinning */
+    .c-button__icon {
+      display: none;
+    }
+  }
+}
+
+@keyframes c-button-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Accessibility: reduce motion */
+@media (prefers-reduced-motion: reduce) {
+  .c-button__spinner {
+    animation: c-button-spin 2.5s linear infinite;
+    block-size: 1.1em;
+    display: inline-block;
+    inline-size: 1.1em;
+  }
+}

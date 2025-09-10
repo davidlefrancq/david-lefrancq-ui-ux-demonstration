@@ -1,0 +1,17 @@
+@use "../abstracts/variables" as vars;
+
+:root {
+  --color-primary: #{vars.$color-primary};
+  --color-gray-900: #{vars.$color-gray-900};
+  --color-white: #{vars.$color-white};
+  --font-sans: #{vars.$font-sans};
+  --color-success: #{vars.$color-success};
+  --color-error: #{vars.$color-error};
+
+  @each $k, $v in vars.$spacing-scale {
+    --space-#{$k}: #{$v};
+  }
+  @each $k, $v in vars.$font-sizes {
+    --text-#{$k}: #{$v};
+  }
+}

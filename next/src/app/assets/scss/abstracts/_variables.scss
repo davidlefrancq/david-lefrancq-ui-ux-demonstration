@@ -1,0 +1,55 @@
+// Design tokens (Sass only — no CSS output here)
+$color-primary: #4f46e5;
+$color-primary-700: #4338ca;
+$color-gray-900: #111827;
+$color-gray-600: #4b5563;
+$color-white: #fff;
+$color-black: #000;
+$color-success: #16a34a; // green-600
+$color-error: #dc2626; // red-600
+
+$spacing-scale: (
+  0: 0,
+  1: 0.25rem,
+  2: 0.5rem,
+  3: 0.75rem,
+  4: 1rem,
+  6: 1.5rem,
+  8: 2rem,
+  12: 3rem,
+);
+$font-sans:
+  ui-sans-serif,
+  system-ui,
+  -apple-system,
+  "Segoe UI",
+  roboto,
+  "Helvetica Neue",
+  arial,
+  "Noto Sans",
+  "Apple Color Emoji",
+  "Segoe UI Emoji";
+$font-sizes: (
+  xs: 0.75rem,
+  sm: 0.875rem,
+  base: 1rem,
+  lg: 1.125rem,
+  xl: 1.25rem,
+  "2xl": 1.5rem,
+  "3xl": 1.875rem,
+);
+$breakpoints: (
+  xs: 360px,
+  sm: 640px,
+  md: 768px,
+  lg: 1024px,
+  xl: 1280px,
+  "2xl": 1536px,
+);
+$z-index-scale: (
+  base: 0,
+  dropdown: 1000,
+  overlay: 1100,
+  modal: 1200,
+  toast: 1300,
+);

@@ -1,0 +1,49 @@
+// BEM architecture for ButtonDemo page
+// Documentation: https://getbem.com/
+
+.c-button-demo {
+  display: grid;
+  gap: 1rem;
+  padding: 2rem 0;
+
+  &__title {
+    color: var(--color-title, #222);
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+
+  &__group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 0;
+  }
+
+  &__force-state {
+    align-items: center;
+    color: var(--color-force-state, #555);
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 1rem;
+    gap: 0.5rem;
+  }
+
+  &__label {
+    font-weight: 500;
+    margin-right: 0.5rem;
+  }
+
+  // Example modifier usage
+  &--dark {
+    background: #222;
+    color: #fff;
+  }
+}
+
+// Example usage in JSX:
+// <div className="c-button-demo">
+//   <h2 className="c-button-demo__title">Buttons</h2>
+//   <div className="c-button-demo__group">...</div>
+//   <div className="c-button-demo__force-state">...</div>
+// </div>
