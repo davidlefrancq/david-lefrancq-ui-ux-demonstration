@@ -7,7 +7,7 @@ const Footer = () => {
     <footer className="l-footer">
       <div className="l-footer__content">
         <p className="l-footer__text">
-          © {new Date().getFullYear()} David Lefrancq. All rights reserved.
+          © 2025 David Lefrancq (ISC License).
         </p>
         <nav className="l-footer__nav">
           <a
@@ -17,8 +17,6 @@ const Footer = () => {
           >
             GitHub
           </a>
-          <a href="/about">About</a>
-          <a href="/contact">Contact</a>
         </nav>
       </div>
     </footer>
