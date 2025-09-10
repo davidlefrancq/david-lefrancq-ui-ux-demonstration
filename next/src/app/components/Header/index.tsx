@@ -46,7 +46,7 @@ const Header = () => {
           onClick={toggleTheme}
           aria-label="Toggle light/dark mode"
         >
-          <span className="group inline-flex shrink-0 justify-center items-center size-9">
+          <span className="c-theme-switch__icon-wrapper">
             {theme === "dark" ? (
               <IconLight className="c-theme-switch__icon" />
             ) : (
