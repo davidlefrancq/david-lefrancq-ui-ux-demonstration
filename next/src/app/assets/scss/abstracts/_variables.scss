@@ -1,13 +1,41 @@
 // Design tokens (Sass only — no CSS output here)
+
+// Couleurs principales
 $color-primary: #4f46e5;
 $color-primary-700: #4338ca;
+$color-success: #16a34a; // green-600
+$color-error: #dc2626; // red-600
+$color-gray-100: #f3f4f6;
 $color-gray-900: #111827;
 $color-gray-600: #4b5563;
 $color-white: #fff;
 $color-black: #000;
-$color-success: #16a34a; // green-600
-$color-error: #dc2626; // red-600
 
+// Couleurs spécifiques
+$color-title: #222;
+$color-force-state: #555;
+$color-dark-bg: #222;
+$color-dark-text: #fff;
+$color-navigation-bg: #fff;
+$color-navigation-link: #333;
+$color-navigation-shadow: 0 2px 4px rgb(0 0 0 / 10%);
+$color-border: #ccc;
+$color-form-primary: #0070f3;
+$color-form-error: #ff4d4f;
+$color-footer-bg: #f8f8f8;
+$color-footer-link: #333;
+$color-footer-text: #666;
+$color-sidebar-bg: #fff;
+$color-sidebar-link: #333;
+$color-sidebar-shadow: 0 2px 4px rgb(0 0 0 / 10%);
+$color-logo-bg: #13203a;
+$color-header-shadow: 0 4px 24px rgb(0 0 0 / 12%);
+$color-logo-shadow: 0 2px 8px rgb(0 0 0 / 10%);
+$color-link-hover: #0070f3;
+$color-dark-gray-900: #f3f4f6;
+$color-dark-white: #0b0f19;
+
+// Échelles
 $spacing-scale: (
   0: 0,
   1: 0.25rem,
@@ -18,6 +46,23 @@ $spacing-scale: (
   8: 2rem,
   12: 3rem,
 );
+$breakpoints: (
+  xs: 360px,
+  sm: 640px,
+  md: 768px,
+  lg: 1024px,
+  xl: 1280px,
+  "2xl": 1536px,
+);
+$z-index-scale: (
+  base: 0,
+  dropdown: 1000,
+  overlay: 1100,
+  modal: 1200,
+  toast: 1300,
+);
+
+// Fonts
 $font-sans:
   ui-sans-serif,
   system-ui,
@@ -38,18 +83,17 @@ $font-sizes: (
   "2xl": 1.5rem,
   "3xl": 1.875rem,
 );
-$breakpoints: (
-  xs: 360px,
-  sm: 640px,
-  md: 768px,
-  lg: 1024px,
-  xl: 1280px,
-  "2xl": 1536px,
-);
-$z-index-scale: (
-  base: 0,
-  dropdown: 1000,
-  overlay: 1100,
-  modal: 1200,
-  toast: 1300,
-);
+
+// Variables CSS
+:root {
+  --color-header-bg: #{$color-white};
+  --color-header-title: #{$color-gray-900};
+  --color-header-desc: #{$color-gray-600};
+  --color-header-link: #{$color-primary};
+  --color-theme-switch-bg: #{$color-white};
+  --color-theme-switch-border: #{$color-gray-600};
+  --color-theme-switch-fg: #{$color-gray-900};
+  --color-theme-switch-bg-hover: #{$color-gray-100};
+  --color-theme-switch-border-hover: #{$color-primary};
+  --color-theme-switch-fg-hover: #{$color-primary};
+}

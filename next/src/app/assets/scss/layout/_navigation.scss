@@ -1,6 +1,8 @@
+@import "../abstracts/variables";
+
 .l-navigation {
-  background: var(--color-navigation-bg, #fff);
-  box-shadow: 0 2px 4px rgb(0 0 0 / 10%);
+  background: var(--color-navigation-bg, #{$color-navigation-bg});
+  box-shadow: #{$color-navigation-shadow};
   padding: 1rem 0;
 
   &__logo {
@@ -13,7 +15,7 @@
     justify-content: center;
 
     a {
-      color: var(--color-navigation-link, #333);
+      color: var(--color-navigation-link, #{$color-navigation-link});
       text-decoration: none;
 
       &:hover {

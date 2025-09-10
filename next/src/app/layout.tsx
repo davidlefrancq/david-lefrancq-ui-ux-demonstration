@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./assets/scss/main.scss";
+import Header from "./components/Header/Header";
 
 export const metadata: Metadata = {
   title: "UI/UX Demonstration",
@@ -13,7 +14,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr">
-      <body>{children}</body>
+      <body>
+        <Header />
+        {children}
+      </body>
     </html>
   );
 }
