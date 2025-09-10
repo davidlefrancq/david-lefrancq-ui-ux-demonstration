@@ -1,5 +1,7 @@
+@import "../abstracts/variables";
+
 .l-footer {
-  background: var(--color-footer-bg, #f8f8f8);
+  background: var(--color-footer-bg, #{$color-footer-bg});
   padding: 2rem 0;
   text-align: center;
 
@@ -14,7 +16,7 @@
     margin-bottom: 1rem;
 
     a {
-      color: var(--color-footer-link, #333);
+      color: var(--color-footer-link, #{$color-footer-link});
       text-decoration: none;
 
       &:hover {
@@ -24,7 +26,7 @@
   }
 
   &__copyright {
-    color: var(--color-footer-text, #666);
+    color: var(--color-footer-text, #{$color-footer-text});
     font-size: 0.875rem;
   }
 }

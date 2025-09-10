@@ -1,6 +1,8 @@
+@import "../abstracts/variables";
+
 .l-sidebar {
-  background: var(--color-sidebar-bg, #fff);
-  box-shadow: 0 2px 4px rgb(0 0 0 / 10%);
+  background: var(--color-sidebar-bg, #{$color-sidebar-bg});
+  box-shadow: #{$color-sidebar-shadow};
   padding: 1rem 0;
 
   &__logo {
@@ -13,7 +15,7 @@
     gap: 1rem;
 
     a {
-      color: var(--color-sidebar-link, #333);
+      color: var(--color-sidebar-link, #{$color-sidebar-link});
       text-decoration: none;
 
       &:hover {

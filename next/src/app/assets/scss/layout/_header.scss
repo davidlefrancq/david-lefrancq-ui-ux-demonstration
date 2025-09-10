@@ -1,24 +1,114 @@
+@import "../abstracts/variables";
+
 .l-header {
-  background: var(--color-header-bg, #fff);
-  box-shadow: 0 2px 4px rgb(0 0 0 / 10%);
-  padding: 1rem 0;
+  align-items: center;
+  background: var(--color-header-bg);
+  box-shadow: #{$color-header-shadow};
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin: 0;
+  padding: 2.5rem 2rem 2rem;
+  width: 100%;
+
+  &__top-row {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 900px;
+    width: 100%;
+  }
 
   &__logo {
-    margin-bottom: 1rem;
+    align-items: center;
+    display: flex;
+    margin-bottom: 0;
+
+    .c-logo {
+      background: #{$color-logo-bg};
+      border-radius: 50%;
+      box-shadow: #{$color-logo-shadow};
+      object-fit: cover;
+    }
+  }
+
+  &__title {
+    color: var(--color-header-title);
+    flex: 1;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0;
+    text-align: center;
+  }
+
+  &__desc {
+    margin: 0 auto;
+    max-width: 900px;
+    text-align: center;
+
+    p {
+      color: var(--color-header-desc);
+      font-size: 1.15rem;
+      margin: 0.25rem 0;
+    }
   }
 
   &__nav {
     display: flex;
-    gap: 1rem;
+    gap: 2rem;
     justify-content: center;
+    margin-top: 1rem;
 
     a {
-      color: var(--color-header-link, #333);
+      color: var(--color-header-link);
+      font-size: 1.1rem;
+      font-weight: 500;
       text-decoration: none;
+      transition: color 0.2s;
 
       &:hover {
+        color: #{$color-link-hover};
         text-decoration: underline;
       }
     }
+  }
+}
+
+.c-theme-switch {
+  align-items: center;
+  background: var(--color-theme-switch-bg);
+  border: 1px solid var(--color-theme-switch-border);
+  border-radius: 50%;
+  box-shadow: 0 2px 6px rgb(0 0 0 / 10%);
+  color: var(--color-theme-switch-fg);
+  cursor: pointer;
+  display: flex;
+  font-size: 1.5rem;
+  height: 40px;
+  justify-content: center;
+  transition:
+    background 0.2s,
+    color 0.2s,
+    border-color 0.2s;
+  width: 40px;
+
+  &:hover {
+    background: var(--color-theme-switch-bg-hover);
+    border-color: var(--color-theme-switch-border-hover);
+    color: var(--color-theme-switch-fg-hover);
+  }
+
+  &__icon {
+    display: block;
+    fill: none;
+    height: 24px;
+    stroke: currentcolor;
+    transition:
+      stroke 0.2s,
+      fill 0.2s;
+    width: 24px;
   }
 }
