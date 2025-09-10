@@ -25,6 +25,7 @@ $color-form-error: #ff4d4f;
 $color-footer-bg: #f8f8f8;
 $color-footer-link: #333;
 $color-footer-text: #666;
+$color-footer-shadow: 0 -2px 4px rgb(0 0 0 / 10%);
 $color-sidebar-bg: #fff;
 $color-sidebar-link: #333;
 $color-sidebar-shadow: 0 2px 4px rgb(0 0 0 / 10%);
@@ -96,4 +97,8 @@ $font-sizes: (
   --color-theme-switch-bg-hover: #{$color-gray-100};
   --color-theme-switch-border-hover: #{$color-primary};
   --color-theme-switch-fg-hover: #{$color-primary};
+  --color-footer-bg: #{$color-footer-bg};
+  --color-footer-link: #{$color-footer-link};
+  --color-footer-text: #{$color-footer-text};
+  --color-footer-shadow: #{$color-footer-shadow};
 }

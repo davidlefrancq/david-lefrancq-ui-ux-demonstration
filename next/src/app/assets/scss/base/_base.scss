@@ -1,4 +1,14 @@
 // Element-level defaults kept lightweight
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+
 img {
   display: block;
   height: auto;
