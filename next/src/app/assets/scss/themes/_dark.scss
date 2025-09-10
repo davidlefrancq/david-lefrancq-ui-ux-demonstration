@@ -2,9 +2,24 @@
 
 /* Theme uses CSS variables to avoid specificity battles */
 :root[data-theme="dark"] {
+  /* Base colors */
   --color-gray-900: #{$color-dark-gray-900};
   --color-white: #{$color-dark-white};
 
-  background: var(--color-white);
-  color: var(--color-gray-900);
+  /* Common variables */
+  --color-title: #{$color-dark-title};
+
+  /* Header variables */
+  --color-header-bg: #{$color-dark-header-bg};
+  --color-header-title: #{$color-dark-text};
+  --color-header-desc: #{$color-dark-desc};
+  --color-header-link: #{$color-primary};
+
+  /* Footer variables */
+  --color-footer-bg: #{$color-dark-footer-bg};
+  --color-footer-link: #{$color-dark-text};
+  --color-footer-text: #{$color-dark-footer-text};
+
+  background: #{$color-dark-bg};
+  color: #{$color-dark-text};
 }
