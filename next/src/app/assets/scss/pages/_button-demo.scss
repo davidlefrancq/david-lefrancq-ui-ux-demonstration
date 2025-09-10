@@ -3,7 +3,6 @@
 .c-button-demo {
   display: grid;
   gap: 1rem;
-  padding: 2rem 0;
 
   &__title {
     color: var(--color-title, #{$color-title});

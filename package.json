@@ -8,6 +8,7 @@
     "stop": "docker-compose down -v",
     "prepare": "husky && npm run prepare:next",
     "prepare:next": "cd next && npm i",
+    "format" : "",
     "check": "npm run check:lint && npm run check:prettier && npm run check:stylelint",
     "check:lint": "docker-compose run --rm nextjs npm run lint",
     "check:prettier": "docker-compose run --rm nextjs npm run prettier:check",
