@@ -1,0 +1,8 @@
+/* Theme uses CSS variables to avoid specificity battles */
+:root[data-theme="dark"] {
+  --color-gray-900: #f3f4f6;
+  --color-white: #0b0f19;
+
+  background: var(--color-white);
+  color: var(--color-gray-900);
+}

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import "./styles/globals.scss";
+import "./assets/scss/main.scss";
 
 export const metadata: Metadata = {
   title: "UI/UX Demonstration",

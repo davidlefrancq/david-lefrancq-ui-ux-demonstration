@@ -1,0 +1,17 @@
+@use "../abstracts/mixins" as mixins;
+
+body {
+  color: var(--color-gray-900);
+  font-family: var(--font-sans);
+  line-height: 1.6;
+}
+
+h1 {
+  @include mixins.fluid-type(1.5rem, 2.25rem);
+
+  margin: var(--space-4) 0;
+}
+
+p {
+  font-size: var(--text-base);
+}

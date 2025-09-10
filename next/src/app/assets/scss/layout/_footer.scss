@@ -1,0 +1,30 @@
+.l-footer {
+  background: var(--color-footer-bg, #f8f8f8);
+  padding: 2rem 0;
+  text-align: center;
+
+  &__logo {
+    margin-bottom: 1rem;
+  }
+
+  &__social {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 1rem;
+
+    a {
+      color: var(--color-footer-link, #333);
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__copyright {
+    color: var(--color-footer-text, #666);
+    font-size: 0.875rem;
+  }
+}

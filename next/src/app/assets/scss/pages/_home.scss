@@ -1,0 +1,5 @@
+@use "../abstracts/mixins" as mixins;
+
+.c-home {
+  @include mixins.fluid-space(margin-top, 1rem, 3rem);
+}
