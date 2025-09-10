@@ -20,6 +20,23 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
+## SASS Configuration & BEM Prefixes
+
+This project uses a modular SASS architecture based on the 7-1 pattern. For class naming, we follow a BEM-inspired prefix convention to keep styles organized and maintainable:
+
+- **c- (component):** For reusable, interactive or visual components.
+  - Example: `.c-button`, `.c-modal`, `.c-button-demo`
+- **o- (object):** For structural objects, wrappers, or containers that organize content.
+  - Example: `.o-media`, `.o-container`, `.o-list`
+- **l- (layout):** For classes managing the overall page or section layout.
+  - Example: `.l-header`, `.l-footer`, `.l-grid`
+- **u- (utility):** For utility classes that apply a single, quick rule (margin, padding, hide, etc.).
+  - Example: `.u-mb-2`, `.u-hidden`, `.u-text-center`
+- **t- (theme):** For theme or style variations (dark, light, color, etc.).
+  - Example: `.t-dark`, `.t-light`, `.t-primary`
+
+These prefixes help keep the codebase clear and scalable. For more details, see the SASS files in `src/app/assets/scss/`.
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:
