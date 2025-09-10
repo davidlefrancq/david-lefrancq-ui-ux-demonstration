@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./assets/scss/main.scss";
-import Header from "./components/Header/Header";
+import Header from "./components/Header";
 import Footer from "./components/Footer";
 
 export const metadata: Metadata = {
