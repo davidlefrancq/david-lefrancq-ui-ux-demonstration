@@ -9,6 +9,7 @@ COPY next/next.config.js ./
 COPY next/tsconfig.json ./
 COPY next/eslint.config.mjs ./
 COPY next/.stylelintrc ./
+COPY next/.prettierignore ./
 
 RUN npm ci
 
