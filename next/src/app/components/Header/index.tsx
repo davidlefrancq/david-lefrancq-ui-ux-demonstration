@@ -20,7 +20,7 @@ const Header = () => {
   const [lang, setLang] = useState<string | null>(null);
 
   useEffect(() => {
-    if (typeof window !== "undefined" && navigator) {
+    if (typeof window !== "undefined") {
       setLang(navigator.language);
     }
   }, []);
