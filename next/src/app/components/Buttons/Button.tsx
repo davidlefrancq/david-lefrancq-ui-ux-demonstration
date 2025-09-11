@@ -58,10 +58,10 @@ export function Button({
       disabled={disabled || isLoading}
       title={
         size === "sm"
-          ? label ??
+          ? (label ??
             (typeof children === "string" || typeof children === "number"
               ? String(children)
-              : undefined)
+              : undefined))
           : undefined
       }
       {...rest}
