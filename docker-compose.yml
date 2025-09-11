@@ -6,6 +6,9 @@ services:
     working_dir: /app
     environment:
       - NODE_ENV=development
+      - WATCHPACK_POLLING=true
+      - CHOKIDAR_USEPOLLING=true
+      - CHOKIDAR_INTERVAL=1000
     volumes:
       - ./next/public:/app/public  # Mounts public assets
       - ./next/src:/app/src  # Mounts source code
