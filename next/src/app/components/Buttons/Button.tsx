@@ -56,7 +56,14 @@ export function Button({
       aria-busy={isLoading || undefined}
       aria-live="polite"
       disabled={disabled || isLoading}
-      title={size === "sm" ? label || (children as string) : undefined}
+      title={
+        size === "sm"
+          ? label ??
+            (typeof children === "string" || typeof children === "number"
+              ? String(children)
+              : undefined)
+          : undefined
+      }
       {...rest}
     >
       {renderIcon()}
