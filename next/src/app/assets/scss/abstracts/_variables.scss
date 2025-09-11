@@ -6,8 +6,23 @@ $color-primary-700: #4338ca;
 $color-success: #16a34a; // green-600
 $color-error: #dc2626; // red-600
 $color-gray-100: #f3f4f6;
-$color-gray-900: #111827;
+$color-gray-200: #e5e7eb;
+$color-gray-300: #d1d5db;
+$color-gray-400: #9ca3af;
+$color-gray-500: #6b7280;
 $color-gray-600: #4b5563;
+$color-gray-700: #374151;
+$color-gray-800: #1f2937;
+$color-gray-900: #111827;
+$color-dark-gray-100: #1f2937;
+$color-dark-gray-200: #374151;
+$color-dark-gray-300: #4b5563;
+$color-dark-gray-400: #6b7280;
+$color-dark-gray-500: #9ca3af;
+$color-dark-gray-600: #d1d5db;
+$color-dark-gray-700: #e5e7eb;
+$color-dark-gray-800: #f3f4f6;
+$color-dark-gray-900: #f3f4f6;
 $color-white: #fff;
 $color-black: #000;
 
@@ -38,7 +53,6 @@ $color-logo-bg: #13203a;
 $color-header-shadow: 0 4px 24px rgb(0 0 0 / 12%);
 $color-logo-shadow: 0 2px 8px rgb(0 0 0 / 10%);
 $color-link-hover: #0070f3;
-$color-dark-gray-900: #f3f4f6;
 $color-dark-white: #0b0f19;
 
 // Échelles
@@ -89,21 +103,3 @@ $font-sizes: (
   "2xl": 1.5rem,
   "3xl": 1.875rem,
 );
-
-// Variables CSS
-:root {
-  --color-header-bg: #{$color-white};
-  --color-header-title: #{$color-gray-900};
-  --color-header-desc: #{$color-gray-600};
-  --color-header-link: #{$color-primary};
-  --color-theme-switch-bg: #{$color-white};
-  --color-theme-switch-border: #{$color-gray-600};
-  --color-theme-switch-fg: #{$color-gray-900};
-  --color-theme-switch-bg-hover: #{$color-gray-100};
-  --color-theme-switch-border-hover: #{$color-primary};
-  --color-theme-switch-fg-hover: #{$color-primary};
-  --color-footer-bg: #{$color-footer-bg};
-  --color-footer-link: #{$color-footer-link};
-  --color-footer-text: #{$color-footer-text};
-  --color-footer-shadow: #{$color-footer-shadow};
-}

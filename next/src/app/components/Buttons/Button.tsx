@@ -3,12 +3,14 @@
 import * as React from "react";
 import { Send, CheckCircle2, XCircle, Loader2 } from "lucide-react";
 
-type ButtonState = "idle" | "loading" | "success" | "error";
+type ButtonState = "idle" | "loading" | "success" | "error" | "disabled";
 
 type Props = React.ButtonHTMLAttributes<HTMLButtonElement> & {
   state?: ButtonState;
   label?: string; // fallback if no children
   variant?: "solid" | "ghost";
+  size?: "sm" | "md" | "lg";
+  disabled?: boolean;
 };
 
 // tiny class joiner (évite clsx)
@@ -19,6 +21,7 @@ export function Button({
   state = "idle",
   label,
   variant = "solid",
+  size,
   className,
   disabled,
   children,
@@ -29,6 +32,10 @@ export function Button({
     "c-button",
     variant === "ghost" && "c-button--ghost",
     state !== "idle" && `c-button--${state}`,
+    disabled && "c-button--disabled",
+    size && size === "sm" && "c-button__sm",
+    size && size === "md" && "c-button__md",
+    size && size === "lg" && "c-button__lg",
     className,
   );
 
@@ -49,20 +56,23 @@ export function Button({
       aria-busy={isLoading || undefined}
       aria-live="polite"
       disabled={disabled || isLoading}
+      title={size === "sm" ? label || (children as string) : undefined}
       {...rest}
     >
       {renderIcon()}
-      <span className="c-button__label">
-        {label ??
-          children ??
-          (isLoading
-            ? "Loading…"
-            : state === "success"
-              ? "Sent"
-              : state === "error"
-                ? "Error"
-                : "Send")}
-      </span>
+      {size !== "sm" && (
+        <span className="c-button__label">
+          {label ??
+            children ??
+            (isLoading
+              ? "Loading…"
+              : state === "success"
+                ? "Sent"
+                : state === "error"
+                  ? "Error"
+                  : "Send")}
+        </span>
+      )}
     </button>
   );
 }

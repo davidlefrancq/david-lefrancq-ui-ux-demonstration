@@ -1,12 +1,35 @@
 @use "../abstracts/variables" as vars;
 
 :root {
-  --color-primary: #{vars.$color-primary};
+  --color-gray-100: #{vars.$color-gray-100};
+  --color-gray-200: #{vars.$color-gray-200};
+  --color-gray-300: #{vars.$color-gray-300};
+  --color-gray-400: #{vars.$color-gray-400};
+  --color-gray-500: #{vars.$color-gray-500};
+  --color-gray-600: #{vars.$color-gray-600};
+  --color-gray-700: #{vars.$color-gray-700};
+  --color-gray-800: #{vars.$color-gray-800};
   --color-gray-900: #{vars.$color-gray-900};
+  --color-primary: #{vars.$color-primary};
   --color-white: #{vars.$color-white};
+  --color-text-button: #{vars.$color-white};
   --font-sans: #{vars.$font-sans};
   --color-success: #{vars.$color-success};
   --color-error: #{vars.$color-error};
+  --color-header-bg: #{vars.$color-white};
+  --color-header-title: #{vars.$color-gray-900};
+  --color-header-desc: #{vars.$color-gray-600};
+  --color-header-link: #{vars.$color-primary};
+  --color-theme-switch-bg: #{vars.$color-white};
+  --color-theme-switch-border: #{vars.$color-gray-600};
+  --color-theme-switch-fg: #{vars.$color-gray-900};
+  --color-theme-switch-bg-hover: #{vars.$color-gray-100};
+  --color-theme-switch-border-hover: #{vars.$color-primary};
+  --color-theme-switch-fg-hover: #{vars.$color-primary};
+  --color-footer-bg: #{vars.$color-footer-bg};
+  --color-footer-link: #{vars.$color-footer-link};
+  --color-footer-text: #{vars.$color-footer-text};
+  --color-footer-shadow: #{vars.$color-footer-shadow};
 
   @each $k, $v in vars.$spacing-scale {
     --space-#{$k}: #{$v};

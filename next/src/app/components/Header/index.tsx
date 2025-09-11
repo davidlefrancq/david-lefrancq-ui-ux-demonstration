@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import IconDark from "./IconDark";
 import IconLight from "./IconLight";
+import Menu from "../Menu";
 
 const Header = () => {
   const [theme, setTheme] = useState("light");
@@ -64,11 +65,8 @@ const Header = () => {
           )
         ) : null}
       </div>
-      <nav className="l-header__nav">
-        <Link href="/">Home</Link>
-        <Link href="/about">About</Link>
-        <Link href="/contact">Contact</Link>
-      </nav>
+
+      <Menu />
     </header>
   );
 };
