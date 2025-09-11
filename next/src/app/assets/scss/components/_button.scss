@@ -4,7 +4,7 @@
   background: var(--color-primary);
   border: 0;
   border-radius: 0.5rem;
-  color: var(--color-white);
+  color: var(--color-text-button);
   cursor: pointer;
   display: inline-flex;
   font: inherit;
@@ -22,6 +22,27 @@
   &:disabled {
     cursor: not-allowed;
     opacity: 0.7;
+  }
+
+  &__sm {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 60px;
+  }
+
+  &__md {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 120px;
+  }
+
+  &__lg {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 240px;
   }
 
   &__icon {
@@ -49,16 +70,28 @@
     background: transparent;
     border: 1px solid currentcolor;
     color: var(--color-primary);
+  }
+
+  &--disabled {
+    background: var(--color-gray-300);
+    border: 1px solid var(--color-gray-400);
+    color: var(--color-gray-600);
     cursor: not-allowed;
     opacity: 0.7;
   }
 
   &--success {
     background: var(--color-success);
+    border: 1px solid var(--color-success);
+    color: var(--color-text-button);
+    cursor: default;
   }
 
   &--error {
     background: var(--color-error);
+    border: 1px solid var(--color-error);
+    color: var(--color-text-button);
+    cursor: default;
   }
 
   &--loading {

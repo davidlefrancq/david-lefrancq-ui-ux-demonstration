@@ -1,11 +1,10 @@
 "use client";
 
-import ButtonDemo from "./components/Buttons";
-
 export default function Home() {
   return (
     <main className="l-container">
-      <ButtonDemo />
+      <h2 className="c-button-demo__title">Home</h2>
+      <p>Welcome to the Home page.</p>
     </main>
   );
 }
