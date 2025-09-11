@@ -49,7 +49,7 @@ export default function ButtonDemo() {
           <Button state="error" size="md">
             Error
           </Button>
-          <Button state="disabled" size="md">
+          <Button disabled size="md">
             Disabled
           </Button>
         </div>
