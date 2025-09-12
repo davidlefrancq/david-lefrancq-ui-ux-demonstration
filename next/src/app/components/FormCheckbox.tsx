@@ -45,7 +45,7 @@ export const FormCheckbox: React.FC<FormCheckboxProps> = ({
           checked={checked}
           onChange={onChange}
         />
-        {label ?? label}
+        {label}
       </label>
     )}
   </div>
