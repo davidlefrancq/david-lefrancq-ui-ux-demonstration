@@ -12,7 +12,7 @@
   --color-gray-900: #{vars.$color-gray-900};
   --color-primary: #{vars.$color-primary};
   --color-white: #{vars.$color-white};
-  --color-text: #{color-text};
+  --color-text: #{vars.$color-text};
   --color-text-button: #{vars.$color-white};
   --font-sans: #{vars.$font-sans};
   --color-success: #{vars.$color-success};
