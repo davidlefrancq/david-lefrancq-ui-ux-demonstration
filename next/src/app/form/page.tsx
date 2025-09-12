@@ -108,7 +108,7 @@ export default function FormDemoPage() {
           type="week"
           label="Week :"
         />
-        {/* Rime */}
+        {/* Time */}
         <FormInput
           id="input-time"
           name="input-time"
