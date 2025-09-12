@@ -12,6 +12,7 @@
   --color-gray-900: #{vars.$color-gray-900};
   --color-primary: #{vars.$color-primary};
   --color-white: #{vars.$color-white};
+  --color-text: #{color-text};
   --color-text-button: #{vars.$color-white};
   --font-sans: #{vars.$font-sans};
   --color-success: #{vars.$color-success};
@@ -30,6 +31,11 @@
   --color-footer-link: #{vars.$color-footer-link};
   --color-footer-text: #{vars.$color-footer-text};
   --color-footer-shadow: #{vars.$color-footer-shadow};
+  --color-form-bg: #{vars.$color-form-bg};
+  --color-form-input-bg: #{vars.$color-form-input-bg};
+  --color-form-border: #{vars.$color-form-border};
+  --color-form-focus-border: #{vars.$color-form-focus-border};
+  --color-form-checkbox: #{vars.$color-form-checkbox};
 
   @each $k, $v in vars.$spacing-scale {
     --space-#{$k}: #{$v};

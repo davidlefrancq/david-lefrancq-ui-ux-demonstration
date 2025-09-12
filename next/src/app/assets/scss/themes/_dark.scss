@@ -14,6 +14,7 @@
   --color-gray-900: #{$color-dark-gray-900};
   --color-primary: #{$color-dark-primary};
   --color-white: #{$color-dark-white};
+  --color-text: #{$color-dark-text};
 
   /* Common variables */
   --color-title: #{$color-dark-title};
@@ -31,4 +32,11 @@
 
   background: #{$color-dark-bg};
   color: #{$color-dark-text};
+
+  /* Form demo dark styles */
+  --color-form-bg: #{$color-dark-form-bg};
+  --color-form-input-bg: #{$color-dark-form-input-bg};
+  --color-form-border: #{$color-dark-form-border};
+  --color-form-focus-border: #{$color-dark-form-focus-border};
+  --color-form-checkbox: #{$color-dark-form-checkbox};
 }
