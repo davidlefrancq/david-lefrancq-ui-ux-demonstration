@@ -123,7 +123,7 @@ export default function FormDemoPage() {
           <ColorPicker name="Color" />
         </div>
         {/* Checkbox */}
-        <FormCheckbox name="input-checkbox" label="Checkbox" />
+        <FormCheckbox name="input-checkbox" label="Checkbox" variant="switch" />
         {/* Radio */}
         <FormRadio
           name="input-radio"
