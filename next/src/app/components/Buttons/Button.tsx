@@ -3,7 +3,13 @@
 import * as React from "react";
 import { Send, CheckCircle2, XCircle, Loader2 } from "lucide-react";
 
-type ButtonState = "idle" | "loading" | "success" | "error" | "disabled";
+type ButtonState =
+  | "idle"
+  | "loading"
+  | "success"
+  | "warning"
+  | "error"
+  | "disabled";
 
 type Props = React.ButtonHTMLAttributes<HTMLButtonElement> & {
   state?: ButtonState;

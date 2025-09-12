@@ -2,98 +2,146 @@
 
 import React from "react";
 import { Button } from "../components/Buttons/Button";
+import { ColorPicker } from "../components/ColorPicker";
+import { FormInput } from "../components/FormInput";
+import { FormCheckbox } from "../components/FormCheckbox";
+import { FormRadio } from "../components/FormRadio";
+import { FormFile } from "../components/FormFile";
 
 export default function FormDemoPage() {
   return (
     <main className="l-container">
       <h1 className="c-form__title">Form</h1>
       <form className="c-form">
-        {/* Input */}
-        <div className="c-form__group">
-          <label htmlFor="demo-input" className="c-form__label">
-            Input :
-          </label>
-          <input
-            id="demo-input"
-            name="demo-input"
-            type="text"
-            placeholder="Votre texte ici"
-            className="c-input"
-          />
-        </div>
+        {/* Search */}
+        <FormInput
+          id="input-search"
+          name="input-search"
+          type="search"
+          label="Search :"
+          placeholder="Rechercher..."
+        />
 
-        {/* Textarea */}
+        {/* Text */}
+        <FormInput
+          id="input-text"
+          name="input-text"
+          type="text"
+          label="Text :"
+          placeholder="Texte simple"
+        />
+        {/* Password */}
+        <FormInput
+          id="input-password"
+          name="input-password"
+          type="password"
+          label="Password :"
+          placeholder="Mot de passe"
+        />
+        {/* Email */}
+        <FormInput
+          id="input-email"
+          name="input-email"
+          type="email"
+          label="Email :"
+          placeholder="Adresse email"
+        />
+        {/* URL */}
+        <FormInput
+          id="input-url"
+          name="input-url"
+          type="url"
+          label="URL :"
+          placeholder="https://..."
+        />
+        {/* Tel */}
+        <FormInput
+          id="input-tel"
+          name="input-tel"
+          type="tel"
+          label="Téléphone :"
+          placeholder="06 12 34 56 78"
+        />
+        {/* Number */}
+        <FormInput
+          id="input-number"
+          name="input-number"
+          type="number"
+          label="Number :"
+          min={0}
+          max={100}
+        />
+        {/* Range */}
+        <FormInput
+          id="input-range"
+          name="input-range"
+          type="range"
+          label="Range :"
+          min={0}
+          max={100}
+        />
+        {/* Date */}
+        <FormInput
+          id="input-date"
+          name="input-date"
+          type="date"
+          label="Date :"
+        />
+        {/* Datetime-local */}
+        <FormInput
+          id="input-datetime"
+          name="input-datetime"
+          type="datetime-local"
+          label="Datetime-local :"
+        />
+        {/* Month */}
+        <FormInput
+          id="input-month"
+          name="input-month"
+          type="month"
+          label="Month :"
+        />
+        {/* Week */}
+        <FormInput
+          id="input-week"
+          name="input-week"
+          type="week"
+          label="Week :"
+        />
+        {/* Rime */}
+        <FormInput
+          id="input-time"
+          name="input-time"
+          type="time"
+          label="Time :"
+        />
+        {/* Color */}
         <div className="c-form__group">
-          <label htmlFor="demo-textarea" className="c-form__label">
-            Textarea :
+          <label htmlFor="input-color" className="c-form__label">
+            Color :
           </label>
-          <textarea
-            id="demo-textarea"
-            name="demo-textarea"
-            rows={4}
-            placeholder="Votre texte ici"
-            className="c-textarea"
-          />
+          <ColorPicker name="Color" />
         </div>
-
         {/* Checkbox */}
-        <div className="c-form__group">
-          <label className="c-form__label">
-            <input
-              type="checkbox"
-              name="demo-checkbox"
-              className="c-checkbox"
-            />
-            <span>Checkbox</span>
-          </label>
-        </div>
-
+        <FormCheckbox name="input-checkbox" label="Checkbox" />
         {/* Radio */}
-        <div className="c-form__group">
-          <span className="c-form__label">Radio :</span>
-          <label>
-            <input
-              type="radio"
-              name="demo-radio"
-              value="option1"
-              className="c-radio"
-            />
-            Option 1
-          </label>
-          <label>
-            <input
-              type="radio"
-              name="demo-radio"
-              value="option2"
-              className="c-radio"
-            />
-            Option 2
-          </label>
-          <label>
-            <input
-              type="radio"
-              name="demo-radio"
-              value="option3"
-              className="c-radio"
-            />
-            Option 3
-          </label>
-        </div>
+        <FormRadio
+          name="input-radio"
+          options={[
+            { label: "Option 1", value: "option1" },
+            { label: "Option 2", value: "option2" },
+            { label: "Option 3", value: "option3" },
+          ]}
+        />
+        {/* File */}
+        <FormFile id="input-file" name="input-file" label="File :" />
 
-        {/* Select */}
-        <div className="c-form__group">
-          <label htmlFor="demo-select" className="c-form__label">
-            Select :
-          </label>
-          <select id="demo-select" name="demo-select" className="c-select">
-            <option value="">Choisir...</option>
-            <option value="option1">Option 1</option>
-            <option value="option2">Option 2</option>
-            <option value="option3">Option 3</option>
-          </select>
-        </div>
-        <div className="c-form__actions">
-          <Button type="submit" label="Envoyer" variant="solid" size="md" />
+        {/* submit and reset on one line */}
+        <div className="c-form__group c-form__group--buttons">
+          {/* Reset */}
+          <Button type="reset" label="Reset" state="warning" />
+          {/* Submit */}
+          <Button label="Valider" />
         </div>
       </form>
     </main>
