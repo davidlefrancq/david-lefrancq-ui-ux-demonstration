@@ -37,6 +37,23 @@ This project uses a modular SASS architecture based on the 7-1 pattern. For clas
 
 These prefixes help keep the codebase clear and scalable. For more details, see the SASS files in `src/app/assets/scss/`.
 
+## Components
+
+This project includes several reusable UI components, organized for clarity and scalability:
+
+- **Buttons** (`src/app/components/Buttons/Button.tsx`):
+  Customizable button component for actions and navigation.
+- **Form Controls** (`src/app/components/FormInput.tsx`, `FormCheckbox.tsx`, `FormRadio.tsx`, `FormFile.tsx`):
+  Input fields, checkboxes, radio buttons, and file upload for building accessible forms.
+- **Color Picker** (`src/app/components/ColorPicker.tsx`):
+  Allows users to select and preview colors.
+- **Header & Footer** (`src/app/components/Header/`, `Footer/`):
+  Layout components for consistent branding and navigation.
+- **Menu** (`src/app/components/Menu/`):
+  Navigation menu for site structure.
+
+All components are designed to be easily integrated and styled using the SASS architecture described above.
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:

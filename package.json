@@ -4,7 +4,7 @@
   "description": "Ce dépôt est une base concrète pour échanger sur mon approche technique et mes réalisations. Un support ouvert aux discussions avec recruteurs, équipes ou partenaires potentiels.",
   "scripts": {
     "start": "docker-compose up -d",
-    "restart": "docker-compose restart",
+    "restart": "npm run stop && npm run start",
     "stop": "docker-compose down -v",
     "prepare": "husky && npm run prepare:next",
     "prepare:next": "cd next && npm i",
