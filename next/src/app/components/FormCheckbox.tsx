@@ -19,7 +19,7 @@ export const FormCheckbox: React.FC<FormCheckboxProps> = ({
   onChange,
   variant = "default",
 }) => (
-  <div className=".c-switch">
+  <div className="c-switch">
     {variant === "switch" ? (
       <div className="c-switch__wrapper">
         <label className="c-switch">
