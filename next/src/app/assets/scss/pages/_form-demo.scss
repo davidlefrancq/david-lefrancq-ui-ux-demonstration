@@ -65,3 +65,16 @@
   accent-color: var(--color-form-checkbox);
   margin-right: 0.5rem;
 }
+
+.c-radio {
+  accent-color: var(--color-form-checkbox);
+  align-content: center;
+  align-items: center;
+  cursor: pointer;
+  height: 1.1em;
+  margin-bottom: 0.3rem;
+  margin-right: 0.5rem;
+  transition: box-shadow 0.2s;
+  vertical-align: middle;
+  width: 1.1em;
+}

@@ -8,6 +8,7 @@ export default function FormDemoPage() {
     <main className="l-container">
       <h1 className="c-form__title">Form</h1>
       <form className="c-form">
+        {/* Input */}
         <div className="c-form__group">
           <label htmlFor="demo-input" className="c-form__label">
             Input :
@@ -20,6 +21,8 @@ export default function FormDemoPage() {
             className="c-input"
           />
         </div>
+
+        {/* Textarea */}
         <div className="c-form__group">
           <label htmlFor="demo-textarea" className="c-form__label">
             Textarea :
@@ -32,16 +35,52 @@ export default function FormDemoPage() {
             className="c-textarea"
           />
         </div>
+
+        {/* Checkbox */}
         <div className="c-form__group">
           <label className="c-form__label">
             <input
               type="checkbox"
               name="demo-checkbox"
               className="c-checkbox"
-            />{" "}
-            Checkbox
+            />
+            <span>Checkbox</span>
           </label>
         </div>
+
+        {/* Radio */}
+        <div className="c-form__group">
+          <span className="c-form__label">Radio :</span>
+          <label>
+            <input
+              type="radio"
+              name="demo-radio"
+              value="option1"
+              className="c-radio"
+            />
+            Option 1
+          </label>
+          <label>
+            <input
+              type="radio"
+              name="demo-radio"
+              value="option2"
+              className="c-radio"
+            />
+            Option 2
+          </label>
+          <label>
+            <input
+              type="radio"
+              name="demo-radio"
+              value="option3"
+              className="c-radio"
+            />
+            Option 3
+          </label>
+        </div>
+
+        {/* Select */}
         <div className="c-form__group">
           <label htmlFor="demo-select" className="c-form__label">
             Select :
