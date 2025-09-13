@@ -5,6 +5,17 @@ import Card from "../components/Card";
 import Modal from "../components/Modal";
 import { useState } from "react";
 import { Button } from "../components/Buttons/Button";
+import Tooltip from "../components/Tooltip";
+import { MousePointerClick } from "lucide-react";
+
+const BtnLabel = ({ label }: { label: string }) => (
+  <div style={{ display: "flex", gap: "0.35rem", alignItems: "center" }}>
+    <div>
+      <MousePointerClick />
+    </div>
+    <div>{label}</div>
+  </div>
+);
 
 export default function Pages() {
   const [modalOpen, setModalOpen] = useState(false);
@@ -53,8 +64,8 @@ export default function Pages() {
             </h3>
             <Button
               type="button"
-              label="Ouvrir"
-              defaultIcon={true}
+              label={<BtnLabel label="Ouvrir" />}
+              defaultIcon={false}
               onClick={() => setModalOpen(true)}
               style={{ marginTop: "0.75rem", minWidth: "120px" }}
             />
@@ -104,8 +115,8 @@ export default function Pages() {
             </h3>
             <Button
               type="button"
-              label="Ouvrir"
-              defaultIcon={true}
+              label={<BtnLabel label="Ouvrir" />}
+              defaultIcon={false}
               onClick={() => setModalWithImage(true)}
               style={{ marginTop: "0.75rem", minWidth: "120px" }}
             />
@@ -134,6 +145,66 @@ export default function Pages() {
               </p>
             </Modal>
           </div>
+        </div>
+      </section>
+
+      {/* Tooltip section */}
+      <section style={{ margin: "2rem 0", padding: "1.5rem" }}>
+        <h2 style={{ margin: 0, fontWeight: 700, fontSize: "1.5rem" }}>
+          Tooltip
+        </h2>
+        <div
+          style={{
+            display: "flex",
+            gap: "2rem",
+            alignItems: "center",
+            marginTop: "1.5rem",
+          }}
+        >
+          <Tooltip text="Ceci est un tooltip classique" position="top">
+            <span
+              style={{
+                padding: "0.5rem 1rem",
+                border: "1px solid #ccc",
+                borderRadius: "0.25rem",
+              }}
+            >
+              Survolez-moi
+            </span>
+          </Tooltip>
+          <Tooltip text="Tooltip à gauche" position="left">
+            <span
+              style={{
+                padding: "0.5rem 1rem",
+                border: "1px solid #ccc",
+                borderRadius: "0.25rem",
+              }}
+            >
+              À gauche
+            </span>
+          </Tooltip>
+          <Tooltip text="Tooltip en bas" position="bottom">
+            <span
+              style={{
+                padding: "0.5rem 1rem",
+                border: "1px solid #ccc",
+                borderRadius: "0.25rem",
+              }}
+            >
+              En bas
+            </span>
+          </Tooltip>
+          <Tooltip text="Tooltip à droite" position="right">
+            <span
+              style={{
+                padding: "0.5rem 1rem",
+                border: "1px solid #ccc",
+                borderRadius: "0.25rem",
+              }}
+            >
+              À droite
+            </span>
+          </Tooltip>
         </div>
       </section>
     </main>
