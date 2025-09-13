@@ -8,7 +8,7 @@ import { FormCheckbox } from "../components/FormCheckbox";
 import { FormRadio } from "../components/FormRadio";
 import { FormFile } from "../components/FormFile";
 
-export default function FormDemoPage() {
+export default function FormPage() {
   return (
     <main className="l-container">
       <h1 className="c-form__title">Form</h1>
