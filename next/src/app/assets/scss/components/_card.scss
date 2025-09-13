@@ -1,0 +1,102 @@
+@import "../abstracts/variables";
+
+:root {
+  --color-card-bg: #{$color-card-bg};
+  --color-card-box-shadow-color: #{$color-card-box-shadow-color};
+  --color-card-border: #{$color-card-border};
+  --color-card-title: #{$color-card-title};
+  --color-card-text: #{$color-card-text};
+}
+
+.c-card {
+  background: var(--color-card-bg);
+  border: 1px solid var(--color-card-border);
+  border-radius: 0.75rem;
+  box-shadow: 0 2px 8px var(--color-card-box-shadow-color);
+  color: var(--color-card-text);
+  margin: 1.5rem;
+  padding: 0;
+  transition: box-shadow 0.3s ease;
+
+  // Illustration image (Next.js Image or img)
+  > :is(img, .c-card-img) {
+    border-radius: 0.75rem 0.75rem 0 0;
+    box-shadow: 0 2px 8px var(--color-card-box-shadow-color);
+    display: block;
+    height: 180px;
+    margin: 0;
+    object-fit: cover;
+    padding: 0;
+    transition: transform 0.3s ease;
+    width: 100%;
+  }
+
+  > .c-card-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    justify-content: center;
+    margin: 0;
+    padding: 0 1rem 1rem;
+
+    > h2,
+    > h3 {
+      border-bottom: 1px solid #eee;
+      color: var(--color-card-title);
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 0;
+      margin-top: 0.5rem;
+      padding-bottom: 0.5rem;
+      padding-top: 0;
+      text-transform: capitalize;
+    }
+
+    > p {
+      flex: 1;
+      font-size: 1rem;
+      line-height: 1.5;
+      margin: 0;
+    }
+  }
+
+  &--horizontal {
+    align-items: flex-start;
+    display: flex;
+
+    > :is(img, .c-card-img) {
+      border: none;
+      border-radius: 0.75rem 0 0 0.75rem;
+      box-shadow: none;
+      height: 100%;
+      margin: 0;
+      min-width: 120px;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+      width: 20%;
+    }
+
+    > .c-card-content {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      gap: 0;
+      justify-content: center;
+      margin: 0;
+      padding: 0.5rem 1rem;
+
+      > h2,
+      > h3 {
+        border-bottom: 1px solid #eee;
+        color: var(--color-card-title);
+        font-size: 1.25rem;
+        font-weight: 600;
+        margin-bottom: 0;
+        margin-top: 0;
+        padding-bottom: 0.5rem;
+        padding-top: 0;
+        text-transform: capitalize;
+      }
+    }
+  }
+}
