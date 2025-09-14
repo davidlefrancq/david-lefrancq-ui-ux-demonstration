@@ -2,11 +2,11 @@
 
 import React from "react";
 import { Button } from "../components/Buttons/Button";
-import { ColorPicker } from "../components/ColorPicker";
-import { FormInput } from "../components/FormInput";
-import { FormCheckbox } from "../components/FormCheckbox";
-import { FormRadio } from "../components/FormRadio";
-import { FormFile } from "../components/FormFile";
+import { ColorPicker } from "../components/Form/ColorPicker";
+import { FormInput } from "../components/Form/FormInput";
+import { FormCheckbox } from "../components/Form/FormCheckbox";
+import { FormRadio } from "../components/Form/FormRadio";
+import { FormFile } from "../components/Form/FormFile";
 
 export default function FormPage() {
   return (
