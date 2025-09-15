@@ -9,7 +9,9 @@ const nextConfig: NextConfig = {
     sourceMap: false,
   },
   webpack: (config, { dev }) => {
-    if (!dev) { config.devtool = false; }
+    if (!dev) {
+      config.devtool = false;
+    }
     config.watchOptions = {
       poll: 1000,
       aggregateTimeout: 300,

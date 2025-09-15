@@ -7,6 +7,7 @@ import { useState } from "react";
 import { Button } from "../components/Buttons/Button";
 import Tooltip from "../components/Tooltip";
 import { MousePointerClick } from "lucide-react";
+import ToastPannel, { IToastItem } from "../components/Toast/ToastPannel";
 
 const BtnLabel = ({ label }: { label: string }) => (
   <div style={{ display: "flex", gap: "0.35rem", alignItems: "center" }}>
@@ -20,6 +21,39 @@ const BtnLabel = ({ label }: { label: string }) => (
 export default function Pages() {
   const [modalOpen, setModalOpen] = useState(false);
   const [modalWithImage, setModalWithImage] = useState(false);
+  const [toastList, setToastList] = useState<IToastItem[]>([]);
+  const [toastExemples, setToastExemples] = useState<IToastItem[]>([
+    { id: 1, type: "success", message: "Opération réussie !" },
+    { id: 2, type: "error", message: "Une erreur est survenue." },
+    { id: 3, type: "info", message: "Voici une information importante." },
+    {
+      id: 4,
+      type: "warning",
+      message: "Attention, ceci est un avertissement.",
+    },
+  ]);
+
+  const addToast = (toast: IToastItem) => {
+    setToastList((prev) => [...prev, toast]);
+  };
+
+  const removeToast = (id: number) => {
+    const toast = toastList.find((t) => t.id === id);
+    if (toast) {
+      toastExemples.push(toast);
+      setToastList((prev) => prev.filter((toast) => toast.id !== id));
+      setToastExemples([...toastExemples]);
+    }
+  };
+
+  const handleAddToast = () => {
+    const list = [...toastExemples];
+    const toast = list.pop();
+    if (toast) {
+      addToast(toast);
+      setToastExemples(list);
+    }
+  };
 
   return (
     <main className="l-container">
@@ -206,6 +240,22 @@ export default function Pages() {
             </span>
           </Tooltip>
         </div>
+      </section>
+
+      {/* Toast notifications */}
+      <section style={{ margin: "2rem 0", padding: "1.5rem" }}>
+        <h2 style={{ margin: 0, fontWeight: 700, fontSize: "1.5rem" }}>
+          Notifications
+        </h2>
+        {/* Button to transfert toast exemple to toast list one to one when clicked */}
+        <Button
+          type="button"
+          label={<BtnLabel label="Ajouter une notification" />}
+          defaultIcon={false}
+          onClick={handleAddToast}
+        />
+        {/* ToastPannel component to display the toast list */}
+        <ToastPannel toasts={toastList} removeToast={removeToast} />
       </section>
     </main>
   );
