@@ -15,6 +15,7 @@ import {
 } from "lucide-react";
 import ToastPannel, { IToastItem } from "../components/Toast/ToastPannel";
 import Tabs from "../components/Tabs";
+import Accordion from "../components/Accordion/Accordion";
 
 const BtnLabel = ({ label }: { label: string }) => (
   <div style={{ display: "flex", gap: "0.35rem", alignItems: "center" }}>
@@ -112,6 +113,35 @@ export default function Pages() {
             <div>Contenu du troisième onglet</div>
           </Tabs.Tab>
         </Tabs>
+      </section>
+
+      {/* Accordion section */}
+      <section className="u-utilities__section">
+        <h3 className="u-utilities__title">Accordion</h3>
+        <Accordion>
+          <Accordion.Item title={"Qu'est-ce qu'un Accordion ?"}>
+            <p>
+              Un <b>Accordion</b> est un composant d’interface qui permet
+              d’afficher ou masquer du contenu de façon progressive. Il est
+              utile pour organiser l’information et améliorer l’expérience
+              utilisateur.
+            </p>
+          </Accordion.Item>
+          <Accordion.Item title="Accessibilité">
+            <p>
+              Ce composant gère les attributs ARIA pour une meilleure
+              accessibilité et supporte l’ouverture simple ou multiple des
+              panneaux.
+            </p>
+          </Accordion.Item>
+          <Accordion.Item title="Personnalisation">
+            <ul>
+              <li>Style via SCSS</li>
+              <li>Supporte plusieurs panneaux ouverts</li>
+              <li>Contenu flexible (texte, listes, etc.)</li>
+            </ul>
+          </Accordion.Item>
+        </Accordion>
       </section>
 
       {/* Cards section */}
