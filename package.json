@@ -1,6 +1,6 @@
 {
   "name": "david-lefrancq-ui-ux-demonstration",
-  "version": "0.1.0",
+  "version": "0.3.0",
   "description": "Ce dépôt est une base concrète pour échanger sur mon approche technique et mes réalisations. Un support ouvert aux discussions avec recruteurs, équipes ou partenaires potentiels.",
   "scripts": {
     "start": "docker-compose up -d",

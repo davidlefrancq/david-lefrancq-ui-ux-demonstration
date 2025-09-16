@@ -14,3 +14,14 @@ img {
   height: auto;
   max-width: 100%;
 }
+
+.u-flex {
+  display: flex;
+}
+
+.u-flex-row {
+  align-items: center;
+  flex-direction: row;
+  gap: 0.5rem;
+  justify-content: start;
+}

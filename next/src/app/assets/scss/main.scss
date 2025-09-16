@@ -1,19 +1,18 @@
-// 1) Abstracts (Sass-only, no CSS output)
-@use "abstracts/variables";
+// Abstracts (Sass-only, no CSS output)
 @use "abstracts/functions";
 @use "abstracts/mixins";
 @use "abstracts/placeholders";
 
-// 2) Vendors
+// Vendors
 @use "vendors/normalize";
 
-// 3) Base
+// Base
 @use "base/reset";
 @use "base/base";
 @use "base/typography";
 @use "base/root";
 
-// 4) Layout
+// Layout
 @use "layout/footer";
 @use "layout/forms";
 @use "layout/grid";
@@ -21,13 +20,20 @@
 @use "layout/navigation";
 @use "layout/sidebar";
 
-// 5) Components
+// Components
 @use "components/button";
+@use "components/card";
+@use "components/modal";
+@use "components/toast";
+@use "components/tooltip";
+@use "components/tabs";
+@use "components/accordion";
 
-// 6) Pages
+// Pages
 @use "pages/button-demo";
 @use "pages/form-demo";
 @use "pages/home";
+@use "pages/utilities";
 
-// 7) Themes
+// Themes
 @use "themes/dark";

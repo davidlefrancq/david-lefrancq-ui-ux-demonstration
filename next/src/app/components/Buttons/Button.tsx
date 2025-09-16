@@ -13,7 +13,8 @@ type ButtonState =
 
 type Props = React.ButtonHTMLAttributes<HTMLButtonElement> & {
   state?: ButtonState;
-  label?: string; // fallback if no children
+  label?: React.ReactNode; // fallback if no children
+  defaultIcon?: boolean; // always show the default icon (send)
   variant?: "solid" | "ghost";
   size?: "sm" | "md" | "lg";
   disabled?: boolean;
@@ -26,6 +27,7 @@ const cx = (...parts: Array<string | false | null | undefined>) =>
 export function Button({
   state = "idle",
   label,
+  defaultIcon = true,
   variant = "solid",
   size,
   className,
@@ -46,6 +48,7 @@ export function Button({
   );
 
   const renderIcon = () => {
+    if (!defaultIcon) return null;
     if (isLoading)
       return <Loader2 className="c-button__spinner" aria-hidden="true" />;
     if (state === "success")
@@ -64,10 +67,9 @@ export function Button({
       disabled={disabled || isLoading}
       title={
         size === "sm"
-          ? (label ??
-            (typeof children === "string" || typeof children === "number"
-              ? String(children)
-              : undefined))
+          ? typeof children === "string" || typeof children === "number"
+            ? String(children)
+            : undefined
           : undefined
       }
       {...rest}

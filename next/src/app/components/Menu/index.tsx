@@ -6,6 +6,7 @@ export default function Menu() {
       <Link href="/">Home</Link>
       <Link href="/buttons">Buttons</Link>
       <Link href="/form">Form</Link>
+      <Link href="/utilities">Utilities</Link>
       <Link href="/about">About</Link>
       <Link href="/contact">Contact</Link>
     </nav>

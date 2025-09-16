@@ -33,10 +33,17 @@
   background: #{$color-dark-bg};
   color: #{$color-dark-text};
 
-  /* Form demo dark styles */
+  /* Form dark styles */
   --color-form-bg: #{$color-dark-form-bg};
   --color-form-input-bg: #{$color-dark-form-input-bg};
   --color-form-border: #{$color-dark-form-border};
   --color-form-focus-border: #{$color-dark-form-focus-border};
   --color-form-checkbox: #{$color-dark-form-checkbox};
+
+  /* Card dark styles */
+  --color-card-bg: #{$color-dark-card-bg};
+  --color-card-box-shadow-color: #{$color-dark-card-box-shadow-color};
+  --color-card-border: #{$color-dark-card-border};
+  --color-card-title: #{$color-dark-card-title};
+  --color-card-text: #{$color-dark-card-text};
 }

@@ -67,6 +67,34 @@ $color-header-shadow: 0 4px 24px rgb(0 0 0 / 12%);
 $color-logo-shadow: 0 2px 8px rgb(0 0 0 / 10%);
 $color-link-hover: #0070f3;
 $color-dark-white: #0b0f19;
+$color-card-bg: #fff;
+$color-dark-card-bg: #333;
+$color-card-box-shadow-color: rgb(0 0 0 / 10%);
+$color-dark-card-box-shadow-color: rgb(0 0 0 / 20%);
+$color-card-border: #e0e0e0;
+$color-dark-card-border: #555;
+$color-card-title: #222;
+$color-dark-card-title: #fff;
+$color-card-text: #444;
+$color-dark-card-text: #ddd;
+$color-modal-bg: #fff;
+$color-dark-modal-bg: #333;
+$color-modal-box-shadow-color: rgb(0 0 0 / 15%);
+$color-dark-modal-box-shadow-color: rgb(0 0 0 / 20%);
+$color-modal-border: #e0e0e0;
+$color-dark-modal-border: #555;
+$color-modal-title: #222;
+$color-dark-modal-title: #fff;
+$color-modal-text: #444;
+$color-dark-modal-text: #ddd;
+$color-modal-close: rgb(153 0 0 / 100%);
+$color-modal-close-hover: rgb(238 0 0 / 100%);
+$color-toast-text: #fff;
+$color-toast-content-bg: rgb(0 0 0 / 40%);
+$color-toast-close-color: rgb(255 255 255 / 100%);
+$color-toast-close-color-hover: rgb(255 255 255 / 100%);
+$color-toast-close-bg: rgb(0 0 0 / 40%);
+$color-toast-close-hover: rgb(238 0 0 / 45%);
 
 // Échelles
 $spacing-scale: (
