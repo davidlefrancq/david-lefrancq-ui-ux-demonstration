@@ -8,12 +8,12 @@ export interface IToastItem {
   message: React.ReactNode;
 }
 
-interface ToastPannelProps {
+interface ToastPanelProps {
   toasts?: IToastItem[];
   removeToast?: (id: number) => void;
 }
 
-export default function ToastPannel({ toasts, removeToast }: ToastPannelProps) {
+export default function ToastPanel({ toasts, removeToast }: ToastPanelProps) {
   const handleRemoveToast = (id: number) => {
     if (removeToast) {
       removeToast(id);

@@ -13,7 +13,7 @@ import {
   CircleMinus,
   MousePointerClick,
 } from "lucide-react";
-import ToastPannel, { IToastItem } from "../components/Toast/ToastPannel";
+import ToastPanel, { IToastItem } from "../components/Toast/ToastPanel";
 import Tabs from "../components/Tabs";
 import Accordion from "../components/Accordion/Accordion";
 
@@ -285,7 +285,7 @@ export default function Pages() {
           defaultIcon={false}
           onClick={handleAddToast}
         />
-        <ToastPannel toasts={toastList} removeToast={removeToast} />
+        <ToastPanel toasts={toastList} removeToast={removeToast} />
       </section>
     </main>
   );
