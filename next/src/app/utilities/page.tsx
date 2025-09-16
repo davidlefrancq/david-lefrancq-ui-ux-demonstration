@@ -6,7 +6,13 @@ import Modal from "../components/Modal";
 import { useState } from "react";
 import { Button } from "../components/Buttons/Button";
 import Tooltip from "../components/Tooltip";
-import { MousePointerClick } from "lucide-react";
+import {
+  CircleAlert,
+  CircleCheckBig,
+  CircleDot,
+  CircleMinus,
+  MousePointerClick,
+} from "lucide-react";
 import ToastPannel, { IToastItem } from "../components/Toast/ToastPannel";
 
 const BtnLabel = ({ label }: { label: string }) => (
@@ -23,13 +29,45 @@ export default function Pages() {
   const [modalWithImage, setModalWithImage] = useState(false);
   const [toastList, setToastList] = useState<IToastItem[]>([]);
   const [toastExemples, setToastExemples] = useState<IToastItem[]>([
-    { id: 1, type: "success", message: "Opération réussie !" },
-    { id: 2, type: "error", message: "Une erreur est survenue." },
-    { id: 3, type: "info", message: "Voici une information importante." },
+    {
+      id: 1,
+      type: "success",
+      message: (
+        <div className="u-flex u-flex-row">
+          <CircleCheckBig size={18} />
+          Opération réussie !
+        </div>
+      ),
+    },
+    {
+      id: 2,
+      type: "error",
+      message: (
+        <div className="u-flex u-flex-row">
+          <CircleMinus size={18} />
+          Une erreur est survenue.
+        </div>
+      ),
+    },
+    {
+      id: 3,
+      type: "info",
+      message: (
+        <div className="u-flex u-flex-row">
+          <CircleDot size={18} />
+          Voici une information importante.
+        </div>
+      ),
+    },
     {
       id: 4,
       type: "warning",
-      message: "Attention, ceci est un avertissement.",
+      message: (
+        <div className="u-flex u-flex-row">
+          <CircleAlert size={18} />
+          Attention, ceci est un avertissement.
+        </div>
+      ),
     },
   ]);
 

@@ -87,11 +87,14 @@ $color-modal-title: #222;
 $color-dark-modal-title: #fff;
 $color-modal-text: #444;
 $color-dark-modal-text: #ddd;
-$color-modal-close: #900;
-$color-modal-close-hover: #e00;
+$color-modal-close: rgb(153 0 0 / 100%);
+$color-modal-close-hover: rgb(238 0 0 / 100%);
 $color-toast-text: #fff;
-$color-toast-close: #fff;
-$color-toast-close-hover: rgb(0 0 0 / 20%);
+$color-toast-content-bg: rgb(0 0 0 / 40%);
+$color-toast-close-color: rgb(255 255 255 / 100%);
+$color-toast-close-color-hover: rgb(255 255 255 / 100%);
+$color-toast-close-bg: rgb(0 0 0 / 40%);
+$color-toast-close-hover: rgb(238 0 0 / 45%);
 
 // Échelles
 $spacing-scale: (
