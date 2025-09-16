@@ -14,7 +14,7 @@
 }
 
 // Toast panel position
-.c-toast-pannel {
+.c-toast-panel {
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -138,7 +138,7 @@
 
 // Responsive
 @media (width <= 600px) {
-  .c-toast-pannel {
+  .c-toast-panel {
     left: 1rem;
     right: 1rem;
     top: 1rem;

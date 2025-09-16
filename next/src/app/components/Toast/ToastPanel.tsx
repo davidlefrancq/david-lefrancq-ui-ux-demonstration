@@ -21,7 +21,7 @@ export default function ToastPanel({ toasts, removeToast }: ToastPanelProps) {
   };
 
   return (
-    <div className="c-toast-pannel">
+    <div className="c-toast-panel">
       {toasts &&
         toasts.map((toast) => (
           <Toast
