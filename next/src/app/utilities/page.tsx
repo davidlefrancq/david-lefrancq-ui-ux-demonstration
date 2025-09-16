@@ -98,9 +98,9 @@ export default function Pages() {
     <main className="l-container">
       <h2>Utilities</h2>
 
-      {/* Démo Tabs */}
-      <section style={{ margin: "2rem 0", padding: "1.5rem" }}>
-        <h3 style={{ margin: 0, fontWeight: 700, fontSize: "1.5rem" }}>Tabs</h3>
+      {/* Tabs section */}
+      <section className="u-utilities__section">
+        <h3 className="u-utilities__title">Tabs</h3>
         <Tabs>
           <Tabs.Tab label="Onglet 1">
             <div>Contenu du premier onglet</div>
@@ -114,61 +114,48 @@ export default function Pages() {
         </Tabs>
       </section>
 
-      {/* Démo Cards */}
-      <section style={{ margin: "2rem 0", padding: "1.5rem" }}>
-        <h3 style={{ margin: 0, fontWeight: 700, fontSize: "1.5rem" }}>
-          Cards
-        </h3>
-        <Card horizontal>
-          <Image
-            src="/card-image.png"
-            alt="Sample"
-            width={1024}
-            height={1024}
-          />
-          <div className="c-card-content">
-            <h3>Card title</h3>
-            <p>This is the content of card.</p>
-          </div>
-        </Card>
+      {/* Cards section */}
+      <section className="u-utilities__section">
+        <h3 className="u-utilities__title">Cards</h3>
+        <div style={{ marginTop: "1rem" }}>
+          <Card horizontal>
+            <Image
+              src="/card-image.png"
+              alt="Sample"
+              width={1024}
+              height={1024}
+            />
+            <div className="c-card-content">
+              <h3>Card title</h3>
+              <p>This is the content of card.</p>
+            </div>
+          </Card>
+        </div>
 
-        <Card>
-          <Image
-            src="/card-image.png"
-            alt="Sample"
-            width={1024}
-            height={1024}
-          />
-          <div className="c-card-content">
-            <h3>Card title</h3>
-            <p>This is the content of card.</p>
-          </div>
-        </Card>
+        <div style={{ marginTop: "1.5rem" }}>
+          <Card>
+            <Image
+              src="/card-image.png"
+              alt="Sample"
+              width={1024}
+              height={1024}
+            />
+            <div className="c-card-content">
+              <h3>Card title</h3>
+              <p>This is the content of card.</p>
+            </div>
+          </Card>
+        </div>
       </section>
 
-      <section style={{ margin: "2rem 0", padding: "1.5rem" }}>
-        <h3 style={{ margin: 0, fontWeight: 700, fontSize: "1.5rem" }}>
+      {/* Modal section */}
+      <section className="u-utilities__section">
+        <h3 className="u-utilities__title" style={{ marginBottom: "1rem" }}>
           Modals
         </h3>
-        <div style={{ display: "flex", alignItems: "center", gap: "2.5rem" }}>
-          <div
-            style={{
-              flex: 1,
-              textAlign: "center",
-              border: "1px solid #ccc",
-              padding: "1rem",
-              borderRadius: "0.5rem",
-              boxShadow: "0 2px 8px rgba(0, 0, 0, 0.1)",
-            }}
-          >
-            <h3
-              style={{
-                margin: 0,
-                fontWeight: 700,
-                fontSize: "1.25rem",
-                letterSpacing: "0.02em",
-              }}
-            >
+        <div className="u-utilities__card-demo">
+          <div className="u-utilities__card-demo-item">
+            <h3 className="u-utilities__card-demo-item-title">
               Modal classique
             </h3>
             <Button
@@ -202,24 +189,8 @@ export default function Pages() {
               </p>
             </Modal>
           </div>
-          <div
-            style={{
-              flex: 1,
-              textAlign: "center",
-              border: "1px solid #ccc",
-              padding: "1rem",
-              borderRadius: "0.5rem",
-              boxShadow: "0 2px 8px rgba(0, 0, 0, 0.1)",
-            }}
-          >
-            <h3
-              style={{
-                margin: 0,
-                fontWeight: 700,
-                fontSize: "1.25rem",
-                letterSpacing: "0.02em",
-              }}
-            >
+          <div className="u-utilities__card-demo-item">
+            <h3 className="u-utilities__card-demo-item-title">
               Modal avec image
             </h3>
             <Button
@@ -258,78 +229,33 @@ export default function Pages() {
       </section>
 
       {/* Tooltip section */}
-      <section style={{ margin: "2rem 0", padding: "1.5rem" }}>
-        <h3 style={{ margin: 0, fontWeight: 700, fontSize: "1.5rem" }}>
-          Tooltip
-        </h3>
-        <div
-          style={{
-            display: "flex",
-            gap: "2rem",
-            alignItems: "center",
-            marginTop: "1.5rem",
-          }}
-        >
+      <section className="u-utilities__section">
+        <h3 className="u-utilities__title">Tooltip</h3>
+        <div className="u-utilities__tooltip-demo">
           <Tooltip text="Ceci est un tooltip classique" position="top">
-            <span
-              style={{
-                padding: "0.5rem 1rem",
-                border: "1px solid #ccc",
-                borderRadius: "0.25rem",
-              }}
-            >
-              Survolez-moi
-            </span>
+            <span className="u-utilities__tooltip-demo-item">Survolez-moi</span>
           </Tooltip>
           <Tooltip text="Tooltip à gauche" position="left">
-            <span
-              style={{
-                padding: "0.5rem 1rem",
-                border: "1px solid #ccc",
-                borderRadius: "0.25rem",
-              }}
-            >
-              À gauche
-            </span>
+            <span className="u-utilities__tooltip-demo-item">À gauche</span>
           </Tooltip>
           <Tooltip text="Tooltip en bas" position="bottom">
-            <span
-              style={{
-                padding: "0.5rem 1rem",
-                border: "1px solid #ccc",
-                borderRadius: "0.25rem",
-              }}
-            >
-              En bas
-            </span>
+            <span className="u-utilities__tooltip-demo-item">En bas</span>
           </Tooltip>
           <Tooltip text="Tooltip à droite" position="right">
-            <span
-              style={{
-                padding: "0.5rem 1rem",
-                border: "1px solid #ccc",
-                borderRadius: "0.25rem",
-              }}
-            >
-              À droite
-            </span>
+            <span className="u-utilities__tooltip-demo-item">À droite</span>
           </Tooltip>
         </div>
       </section>
 
-      {/* Toast notifications */}
-      <section style={{ margin: "2rem 0", padding: "1.5rem" }}>
-        <h3 style={{ margin: 0, fontWeight: 700, fontSize: "1.5rem" }}>
-          Notifications
-        </h3>
-        {/* Button to transfert toast exemple to toast list one to one when clicked */}
+      {/* Toast notifications section */}
+      <section className="u-utilities__section">
+        <h3 className="u-utilities__title">Notifications</h3>
         <Button
           type="button"
           label={<BtnLabel label="Ajouter une notification" />}
           defaultIcon={false}
           onClick={handleAddToast}
         />
-        {/* ToastPannel component to display the toast list */}
         <ToastPannel toasts={toastList} removeToast={removeToast} />
       </section>
     </main>
