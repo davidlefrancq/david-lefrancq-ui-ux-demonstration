@@ -30,7 +30,7 @@ export default function Pages() {
   const [modalOpen, setModalOpen] = useState(false);
   const [modalWithImage, setModalWithImage] = useState(false);
   const [toastList, setToastList] = useState<IToastItem[]>([]);
-  const [toastExemples, setToastExemples] = useState<IToastItem[]>([
+  const [toastExamples, setToastExamples] = useState<IToastItem[]>([
     {
       id: 1,
       type: "success",
@@ -81,16 +81,16 @@ export default function Pages() {
     const toast = toastList.find((t) => t.id === id);
     if (toast) {
       setToastList((prev) => prev.filter((toast) => toast.id !== id));
-      setToastExemples((prev) => [...prev, toast]);
+      setToastExamples((prev) => [...prev, toast]);
     }
   };
 
   const handleAddToast = () => {
-    const list = [...toastExemples];
+    const list = [...toastExamples];
     const toast = list.pop();
     if (toast) {
       addToast(toast);
-      setToastExemples(list);
+      setToastExamples(list);
     }
   };
 
