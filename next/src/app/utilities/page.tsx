@@ -80,9 +80,8 @@ export default function Pages() {
   const removeToast = (id: number) => {
     const toast = toastList.find((t) => t.id === id);
     if (toast) {
-      toastExemples.push(toast);
       setToastList((prev) => prev.filter((toast) => toast.id !== id));
-      setToastExemples([...toastExemples]);
+      setToastExemples((prev) => [...prev, toast]);
     }
   };
 
