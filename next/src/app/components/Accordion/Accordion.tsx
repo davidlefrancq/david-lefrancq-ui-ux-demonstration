@@ -1,5 +1,4 @@
 import React, { useState, ReactNode, Children, isValidElement } from "react";
-import "../../assets/scss/components/_accordion.scss";
 
 interface AccordionProps {
   children: ReactNode;
