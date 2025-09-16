@@ -14,6 +14,7 @@ import {
   MousePointerClick,
 } from "lucide-react";
 import ToastPannel, { IToastItem } from "../components/Toast/ToastPannel";
+import Tabs from "../components/Tabs";
 
 const BtnLabel = ({ label }: { label: string }) => (
   <div style={{ display: "flex", gap: "0.35rem", alignItems: "center" }}>
@@ -96,23 +97,59 @@ export default function Pages() {
   return (
     <main className="l-container">
       <h2>Utilities</h2>
-      <Card horizontal>
-        <Image src="/card-image.png" alt="Sample" width={1024} height={1024} />
-        <div className="c-card-content">
-          <h3>Card title</h3>
-          <p>This is the content of card.</p>
-        </div>
-      </Card>
 
-      <Card>
-        <Image src="/card-image.png" alt="Sample" width={1024} height={1024} />
-        <div className="c-card-content">
-          <h3>Card title</h3>
-          <p>This is the content of card.</p>
-        </div>
-      </Card>
+      {/* Démo Tabs */}
+      <section style={{ margin: "2rem 0", padding: "1.5rem" }}>
+        <h3 style={{ margin: 0, fontWeight: 700, fontSize: "1.5rem" }}>Tabs</h3>
+        <Tabs>
+          <Tabs.Tab label="Onglet 1">
+            <div>Contenu du premier onglet</div>
+          </Tabs.Tab>
+          <Tabs.Tab label="Onglet 2">
+            <div>Contenu du second onglet</div>
+          </Tabs.Tab>
+          <Tabs.Tab label="Onglet 3">
+            <div>Contenu du troisième onglet</div>
+          </Tabs.Tab>
+        </Tabs>
+      </section>
+
+      {/* Démo Cards */}
+      <section style={{ margin: "2rem 0", padding: "1.5rem" }}>
+        <h3 style={{ margin: 0, fontWeight: 700, fontSize: "1.5rem" }}>
+          Cards
+        </h3>
+        <Card horizontal>
+          <Image
+            src="/card-image.png"
+            alt="Sample"
+            width={1024}
+            height={1024}
+          />
+          <div className="c-card-content">
+            <h3>Card title</h3>
+            <p>This is the content of card.</p>
+          </div>
+        </Card>
+
+        <Card>
+          <Image
+            src="/card-image.png"
+            alt="Sample"
+            width={1024}
+            height={1024}
+          />
+          <div className="c-card-content">
+            <h3>Card title</h3>
+            <p>This is the content of card.</p>
+          </div>
+        </Card>
+      </section>
 
       <section style={{ margin: "2rem 0", padding: "1.5rem" }}>
+        <h3 style={{ margin: 0, fontWeight: 700, fontSize: "1.5rem" }}>
+          Modals
+        </h3>
         <div style={{ display: "flex", alignItems: "center", gap: "2.5rem" }}>
           <div
             style={{
@@ -222,9 +259,9 @@ export default function Pages() {
 
       {/* Tooltip section */}
       <section style={{ margin: "2rem 0", padding: "1.5rem" }}>
-        <h2 style={{ margin: 0, fontWeight: 700, fontSize: "1.5rem" }}>
+        <h3 style={{ margin: 0, fontWeight: 700, fontSize: "1.5rem" }}>
           Tooltip
-        </h2>
+        </h3>
         <div
           style={{
             display: "flex",
@@ -282,9 +319,9 @@ export default function Pages() {
 
       {/* Toast notifications */}
       <section style={{ margin: "2rem 0", padding: "1.5rem" }}>
-        <h2 style={{ margin: 0, fontWeight: 700, fontSize: "1.5rem" }}>
+        <h3 style={{ margin: 0, fontWeight: 700, fontSize: "1.5rem" }}>
           Notifications
-        </h2>
+        </h3>
         {/* Button to transfert toast exemple to toast list one to one when clicked */}
         <Button
           type="button"
